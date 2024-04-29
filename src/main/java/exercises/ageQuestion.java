@@ -12,16 +12,16 @@ public class ageQuestion {
                 int input = Integer.parseInt(scanner.nextLine().trim());;
                 checkAge(input);
                 return input;
-            } catch (InvalidNameException e){
+            } catch (Exception e){
                 System.out.println("Sorry age must be 16 or higher");
             }
         }
     }
 
-    public static void checkAge(int input) throws InvalidNameException {
+    public static void checkAge(int input) throws Exception {
 
         if (input < 16){
-            throw new InvalidNameException();
+            throw new Exception();
         }
     }
 }

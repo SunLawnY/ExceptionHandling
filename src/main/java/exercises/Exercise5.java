@@ -3,11 +3,15 @@ package exercises;
 import java.util.List;
 import java.util.Scanner;
 
+import static exercises.heightQuestion.getHeightData;
+
 public class Exercise5 {
 
     public static void healthInsuranceDataInput() {
 
         Scanner scanner = new Scanner(System.in);
+        boolean isStudent = false;
+        String occupation = "unemployed";
 
         System.out.println("\n--- Thank you for choosing Blummin Health insurance! ---\n");
         System.out.println("Please input your data:");
@@ -19,13 +23,12 @@ public class Exercise5 {
         int age = ageQuestion.getAge(scanner);
 
         // Height
-        System.out.print("Enter your height (in metres): ");
-        double height = Double.parseDouble(scanner.nextLine().trim());
+        double height = heightQuestion.getHeightData(scanner);
 
 
         // Height
         System.out.print("Enter your weight (in kilograms): ");
-        double weight = scanner.nextDouble();
+        double weight = Double.parseDouble(scanner.nextLine().trim());
 
         // Employment
         boolean employed = EmployedQuestion.getEmploymentData(scanner);
@@ -37,13 +40,13 @@ public class Exercise5 {
             String occupation = scanner.nextLine();
         } else {
             System.out.print("Are you a student?: ");
-            boolean isStudent = scanner.nextBoolean();
+            isStudent = scanner.nextBoolean();
 
         }
 
-        // System.out.println("\nThank you, " + name + ", for providing your information!");
-        // System.out.println("Your Blummin monthly subscription is: £"
-         //       + calculateSubscriptionCharge(age, height, weight, occupation, isStudent));
+        System.out.println("\nThank you, " + name + ", for providing your information!");
+        System.out.println("Your Blummin monthly subscription is: £"
+                + calculateSubscriptionCharge(age, height, weight, occupation, isStudent));
 
         scanner.close();
     }
