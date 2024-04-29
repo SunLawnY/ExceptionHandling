@@ -13,8 +13,7 @@ public class Exercise5 {
         System.out.println("Please input your data:");
 
         // Name
-        System.out.print("Enter your full name: ");
-        String name = scanner.nextLine();
+        String name = nameQuestion.getNameData(scanner);
 
         // Age
         System.out.print("Enter your age: ");

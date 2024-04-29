@@ -11,7 +11,7 @@ public class nameQuestion {
                System.out.println("What is your name: ");
                String input = scanner.nextLine();
                checkValidName(input);
-               return input;
+               return input.toUpperCase();
            } catch (InvalidNameException e){
                System.out.println("Sorry we need a name");
            }
