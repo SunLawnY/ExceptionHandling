@@ -13,7 +13,7 @@ public class nameQuestion {
                checkValidName(input);
                return input.toUpperCase();
            } catch (InvalidNameException e){
-               System.out.println("Sorry we need a name");
+               System.out.println("Sorry we need a full name");
            }
         }
     }
@@ -21,6 +21,9 @@ public class nameQuestion {
     public static void checkValidName(String input) throws InvalidNameException {
         String[] splitString = input.split(" ");
         if (!(splitString.length >= 2)){
+            throw new InvalidNameException();
+        }
+        if (!input.matches("^[A-Za-z]*$")){
             throw new InvalidNameException();
         }
     }
