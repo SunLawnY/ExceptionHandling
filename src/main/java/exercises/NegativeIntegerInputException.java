@@ -1,4 +1,4 @@
 package exercises;
 
-public class NegativeIntegerInputException  extends IllegalArgumentException{
+public class NegativeIntegerInputException extends IllegalArgumentException{
 }
