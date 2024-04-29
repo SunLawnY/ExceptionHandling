@@ -3,7 +3,7 @@ package exercises;
 import javax.naming.InvalidNameException;
 import java.util.Scanner;
 
-public class nameQuestion {
+public class NameQuestion {
 
     public static String getNameData(Scanner scanner) {
         while (true) {

@@ -1,9 +1,8 @@
 package exercises;
 
-import javax.naming.InvalidNameException;
 import java.util.Scanner;
 
-public interface heightQuestion {
+public class HeightQuestion {
 
     public static double getHeightData(Scanner scanner) {
         while (true) {
@@ -29,3 +28,4 @@ public interface heightQuestion {
 
     }
 }
+

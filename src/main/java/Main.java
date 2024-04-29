@@ -3,12 +3,9 @@ import exercises.Exercise5;
 public class Main {
 
     public static void main(String[] args) {
-//        Exercise3.divide();
-//        try {
-//            Exercise4.recursiveMethod();
-//        } catch (StackOverflowError e){
-//            System.out.println("Oops, we're out of space on the stack. Goodnight.");
-//        }
+//        int[] inputs;
+//        inputs = Exercise2.getUserInput();
+//        System.out.println(Exercise1.divide(inputs[0], inputs[1]));
         Exercise5.healthInsuranceDataInput();
     }
 }

@@ -1,9 +1,8 @@
 package exercises;
 
-import javax.naming.InvalidNameException;
 import java.util.Scanner;
 
-public class ageQuestion {
+public class AgeQuestion {
 
     public static int getAge(Scanner scanner) {
         while (true) {

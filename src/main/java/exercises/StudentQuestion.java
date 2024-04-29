@@ -2,13 +2,13 @@ package exercises;
 
 import java.util.Scanner;
 
-public class EmployedQuestion {
+public class StudentQuestion {
 
-    public static boolean getEmploymentData(Scanner scanner){
+    public static boolean getStudentData(Scanner scanner){
 
         while (true){
             try{
-                System.out.println("Are you Employed: ");
+                System.out.println("Are you a student: ");
                 String input = scanner.nextLine();
                 if (input.equalsIgnoreCase("Yes")) {
                     return true;

@@ -3,8 +3,6 @@ package exercises;
 import java.util.List;
 import java.util.Scanner;
 
-import static exercises.heightQuestion.getHeightData;
-
 public class Exercise5 {
 
     public static void healthInsuranceDataInput() {
@@ -17,18 +15,17 @@ public class Exercise5 {
         System.out.println("Please input your data:");
 
         // Name
-        String name = nameQuestion.getNameData(scanner);
+        String name = NameQuestion.getNameData(scanner);
 
         // Age
-        int age = ageQuestion.getAge(scanner);
+        int age = AgeQuestion.getAge(scanner);
 
         // Height
-        double height = heightQuestion.getHeightData(scanner);
+        double height = HeightQuestion.getHeightData(scanner);
 
 
         // Height
-        System.out.print("Enter your weight (in kilograms): ");
-        double weight = Double.parseDouble(scanner.nextLine().trim());
+        double weight = WeightQuestion.getWeightData(scanner);
 
         // Employment
         boolean employed = EmployedQuestion.getEmploymentData(scanner);
@@ -36,11 +33,9 @@ public class Exercise5 {
 
         // Occupation
         if (employed) {
-            System.out.print("What is your occupation?: ");
-            String occupation = scanner.nextLine();
+            occupation = OccupationQuestion.getOccupationData(scanner);
         } else {
-            System.out.print("Are you a student?: ");
-            isStudent = scanner.nextBoolean();
+            isStudent = StudentQuestion.getStudentData(scanner);
 
         }
 
