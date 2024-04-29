@@ -9,7 +9,7 @@ public class ageQuestion {
         while (true) {
             try{
                 System.out.println("What is your age: ");
-                int input = scanner.nextInt();
+                int input = Integer.parseInt(scanner.nextLine().trim());;
                 checkAge(input);
                 return input;
             } catch (InvalidNameException e){

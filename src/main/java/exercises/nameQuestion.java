@@ -8,12 +8,14 @@ public class nameQuestion {
     public static String getNameData(Scanner scanner) {
         while (true) {
            try{
+
                System.out.println("What is your name: ");
                String input = scanner.nextLine();
                checkValidName(input);
                return input.toUpperCase();
+
            } catch (InvalidNameException e){
-               System.out.println("Sorry we need a full name");
+               System.out.println("Sorry we need a full name.");
            }
         }
     }
@@ -23,7 +25,7 @@ public class nameQuestion {
         if (!(splitString.length >= 2)){
             throw new InvalidNameException();
         }
-        if (!input.matches("^[A-Za-z]*$")){
+        if (!input.matches("^[A-Za-z ]*$")){
             throw new InvalidNameException();
         }
     }

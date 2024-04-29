@@ -16,33 +16,34 @@ public class Exercise5 {
         String name = nameQuestion.getNameData(scanner);
 
         // Age
-        System.out.print("Enter your age: ");
         int age = ageQuestion.getAge(scanner);
 
         // Height
         System.out.print("Enter your height (in metres): ");
-        double height = scanner.nextDouble();
+        double height = Double.parseDouble(scanner.nextLine().trim());
+
 
         // Height
         System.out.print("Enter your weight (in kilograms): ");
         double weight = scanner.nextDouble();
 
         // Employment
-        System.out.print("Are you employed?: ");
-        boolean employed = scanner.nextBoolean();
-        scanner.nextLine();
+        boolean employed = EmployedQuestion.getEmploymentData(scanner);
+
 
         // Occupation
-        System.out.print("What is your occupation?: ");
-        String occupation = scanner.nextLine();
+        if (employed) {
+            System.out.print("What is your occupation?: ");
+            String occupation = scanner.nextLine();
+        } else {
+            System.out.print("Are you a student?: ");
+            boolean isStudent = scanner.nextBoolean();
 
-        // Student
-        System.out.print("Are you a student?: ");
-        boolean isStudent = scanner.nextBoolean();
+        }
 
-        System.out.println("\nThank you, " + name + ", for providing your information!");
-        System.out.println("Your Blummin monthly subscription is: £"
-                + calculateSubscriptionCharge(age, height, weight, occupation, isStudent));
+        // System.out.println("\nThank you, " + name + ", for providing your information!");
+        // System.out.println("Your Blummin monthly subscription is: £"
+         //       + calculateSubscriptionCharge(age, height, weight, occupation, isStudent));
 
         scanner.close();
     }
