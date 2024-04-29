@@ -12,16 +12,16 @@ public class ageQuestion {
                 int input = scanner.nextInt();
                 checkAge(input);
                 return input;
-            } catch (InvalidNameException e){
-                System.out.println("Sorry age must be 16 or higher");
+            } catch (NumberFormatException e){
+                System.out.println("Sorry age must be between 16 - 100");
             }
         }
     }
 
-    public static void checkAge(int input) throws InvalidNameException {
+    public static void checkAge(int input) throws NumberFormatException {
 
-        if (input < 16){
-            throw new InvalidNameException();
+        if (input < 16 || input > 100){
+            throw new NumberFormatException();
         }
     }
 }

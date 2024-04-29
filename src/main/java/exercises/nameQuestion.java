@@ -23,7 +23,7 @@ public class nameQuestion {
         if (!(splitString.length >= 2)){
             throw new InvalidNameException();
         }
-        if (!input.matches("^[A-Za-z]*$")){
+        if (!input.matches("^[A-Za-z ]*$")){
             throw new InvalidNameException();
         }
     }

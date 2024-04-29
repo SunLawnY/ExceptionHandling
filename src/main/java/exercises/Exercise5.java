@@ -29,7 +29,7 @@ public class Exercise5 {
 
         // Employment
         System.out.print("Are you employed?: ");
-        boolean employed = scanner.nextBoolean();
+        boolean employed = checkStatus.getStatusEmploy(scanner);
         scanner.nextLine();
 
         // Occupation
@@ -38,7 +38,7 @@ public class Exercise5 {
 
         // Student
         System.out.print("Are you a student?: ");
-        boolean isStudent = scanner.nextBoolean();
+        boolean isStudent = checkStatus.getStatusStu(scanner);
 
         System.out.println("\nThank you, " + name + ", for providing your information!");
         System.out.println("Your Blummin monthly subscription is: £"
