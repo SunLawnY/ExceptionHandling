@@ -17,7 +17,7 @@ public class Exercise5 {
 
         // Age
         System.out.print("Enter your age: ");
-        int age = scanner.nextInt();
+        int age = ageQuestion.getAge(scanner);
 
         // Height
         System.out.print("Enter your height (in metres): ");
